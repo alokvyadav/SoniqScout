@@ -2,7 +2,6 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
-import { Waves } from "lucide-react";
 
 export function SiteHeader() {
   const [email, setEmail] = useState<string | null>(null);
@@ -27,9 +26,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/60 backdrop-blur-xl bg-background/70">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-accent grid place-items-center text-primary-foreground">
-            <Waves className="size-4" />
-          </div>
+          <img src="/logo.svg" alt="" className="size-8 rounded-lg" />
           <span className="font-display font-semibold tracking-tight text-lg">SONIQ<span className="text-primary">.</span></span>
         </Link>
         <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">

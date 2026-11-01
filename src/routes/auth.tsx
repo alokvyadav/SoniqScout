@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { Waves } from "lucide-react";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
@@ -77,9 +76,7 @@ function AuthPage() {
     <div className="min-h-screen grid place-items-center px-4">
       <div className="w-full max-w-md panel p-8">
         <Link to="/" className="flex items-center gap-2 mb-8">
-          <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-accent grid place-items-center text-primary-foreground">
-            <Waves className="size-4" />
-          </div>
+          <img src="/logo.svg" alt="" className="size-8 rounded-lg" />
           <span className="font-display font-semibold tracking-tight text-lg">SONIQ<span className="text-primary">.</span></span>
         </Link>
         <h1 className="text-2xl font-bold">{mode === "signin" ? "Welcome back" : "Create your studio"}</h1>
